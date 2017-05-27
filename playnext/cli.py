@@ -61,7 +61,7 @@ def main():
 
     subparser = subparsers.add_parser('set', help=doc_split(set))
     subparser.add_argument(
-        'filename', metavar='FILE', type=str, 'New current file.')
+        'filename', metavar='FILE', type=str, help='New current file.')
     subparser.set_defaults(func=set)
 
     subparser = subparsers.add_parser('current', help=doc_split(current))
