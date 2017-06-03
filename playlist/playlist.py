@@ -5,7 +5,7 @@ import yaml
 
 class PlayDB(object):
     def __init__(self):
-        config_path = '{}/.cache/playnext'.format(os.getenv('HOME'))
+        config_path = '{}/.cache/playlist'.format(os.getenv('HOME'))
 
         self._config = '{}/db.yml'.format(config_path)
         if not os.path.isfile(self._config):

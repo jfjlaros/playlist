@@ -1,7 +1,7 @@
 import argparse
 
 from . import doc_split, usage, version
-from .playnext import PlayDB
+from .playlist import PlayDB
 
 
 def add(files):

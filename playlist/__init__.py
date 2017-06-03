@@ -1,11 +1,11 @@
-"""playnext: Keep track of on disk playlists.
+"""playlist: Keep track of on disk playlists.
 
 
 Copyright (c) 2017 Jeroen F.J. Laros <jlaros@fixedpoint.nl>
 
 Licensed under the MIT license, see the LICENSE file.
 """
-from .playnext import PlayDB
+from .playlist import PlayDB
 
 
 __version_info__ = ('0', '0', '1')

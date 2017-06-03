@@ -4,8 +4,8 @@ import sys
 from setuptools import setup
 
 
-package = 'playnext'
-package_name = 'playnext'
+package = 'playlist'
+package_name = 'playlist'
 description = '{}: Keep track of on disk playlists.'.format(package_name)
 documentation = 'README.md'
 license = 'MIT License'
