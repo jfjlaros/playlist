@@ -16,7 +16,7 @@ class PlayDB(object):
 
         self._path = os.path.realpath('.')
         if self._path not in self._db:
-            self._db[self._path] = {'files': [], 'offset': 0}
+            self._db[self._path] = {'files': [], 'offset': 0, 'config': ''}
 
         self._item = self._db[self._path]
 
@@ -58,8 +58,16 @@ class PlayDB(object):
         self._item['offset'] += 1
 
     def show(self):
+        print 'Playlist:'
         for index, file_name in enumerate(self._item['files']):
             spacer = ' '
             if index == self._item['offset']:
                 spacer = '*'
             print '{} {}'.format(spacer, file_name)
+        print '\nConfig: {}'.format(self._item['config'])
+
+    def config(self, config_string):
+        self._item['config'] = config_string
+
+    def show_config(self):
+        print self._item['config']

@@ -42,6 +42,18 @@ def show():
     PlayDB().show()
 
 
+def config(config_string):
+    """Set configuration for the current directory.
+    """
+    PlayDB().config(config_string)
+
+
+def show_config():
+    """Show configuration for the current directory.
+    """
+    PlayDB().show_config()
+
+
 def main():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -72,6 +84,16 @@ def main():
 
     subparser = subparsers.add_parser('show', help=doc_split(show))
     subparser.set_defaults(func=show)
+
+    subparser = subparsers.add_parser('config', help=doc_split(config))
+    subparser.add_argument(
+        'config_string', metavar='CONFIG', type=str,
+        help='Configuration string.')
+    subparser.set_defaults(func=config)
+
+    subparser = subparsers.add_parser(
+        'show_config', help=doc_split(show_config))
+    subparser.set_defaults(func=show_config)
 
     args = parser.parse_args()
 
