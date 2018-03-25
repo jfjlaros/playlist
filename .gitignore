@@ -1,0 +1,4 @@
+*.swp
+playlist/*.pyc
+dist/
+playlistdb.egg-info/

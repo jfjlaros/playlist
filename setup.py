@@ -5,7 +5,7 @@ from setuptools import setup
 
 
 package = 'playlist'
-package_name = 'playlist'
+package_name = 'playlistdb'
 description = '{}: Keep track of on disk playlists.'.format(package_name)
 documentation = 'README.md'
 license = 'MIT License'
